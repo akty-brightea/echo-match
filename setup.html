@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>EchoMatch - ゲーム設定</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+
+    <!-- プレイヤー名入力 -->
+    <section id="player-names" class="player-names">
+      <h2>プレイヤー名（最大8人）</h2>
+      <div id="player-inputs" class="player-inputs">
+        <div class="column">
+          <input type="text" placeholder="プレイヤー1" class="player-input" />
+          <input type="text" placeholder="プレイヤー2" class="player-input" />
+          <input type="text" placeholder="プレイヤー3" class="player-input" />
+          <input type="text" placeholder="プレイヤー4" class="player-input" />
+        </div>
+        <div class="column">
+          <input type="text" placeholder="プレイヤー5" class="player-input" />
+          <input type="text" placeholder="プレイヤー6" class="player-input" />
+          <input type="text" placeholder="プレイヤー7" class="player-input" />
+          <input type="text" placeholder="プレイヤー8" class="player-input" />
+        </div>
+      </div>
+    </section>
+
+    <!-- ターン数選択 -->
+    <section class="turn-selection">
+      <h2>ターン数を選んでね</h2>
+      <div class="turn-buttons">
+        <!-- JavaScriptで選択肢10個生成でもOK -->
+        <button class="turn-button" data-turn="1">1</button>
+        <button class="turn-button" data-turn="2">2</button>
+        <button class="turn-button" data-turn="3">3</button>
+        <button class="turn-button" data-turn="4">4</button>
+        <button class="turn-button" data-turn="5">5</button>
+        <button class="turn-button" data-turn="6">6</button>
+        <button class="turn-button" data-turn="7">7</button>
+        <button class="turn-button" data-turn="8">8</button>
+        <button class="turn-button" data-turn="9">9</button>
+        <button class="turn-button" data-turn="10">10</button>
+      </div>
+    </section>
+
+    <!-- ゲーム開始 -->
+    <section class="start-section">
+      <button id="start-game" type="button">🎮ゲーム開始</button>
+    </section>
+
+  </div>
+
+  <script src="js/setup.js"></script>
+</body>
+</html>

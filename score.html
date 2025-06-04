@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>採点結果 - EchoMatch</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      text-align: center;
+      font-family: sans-serif;
+    }
+    #score-summary {
+      margin-top: 2em;
+    }
+    #graph-area {
+      max-width: 600px;
+      margin: 2em auto;
+    }
+    .chart-button-group {
+      display: flex;
+      justify-content: center;
+      gap: 1em;
+      margin-top: 1em;
+    }
+    .chart-button-group button {
+      padding: 0.5em 1.5em;
+      font-size: 1em;
+    }
+    #next-button {
+      margin-top: 3em;
+      font-size: 1.2em;
+      padding: 0.8em 2em;
+    }
+  </style>
+</head>
+<body>
+  <h1>採点結果</h1>
+
+  <div id="score-summary">
+    <p>スコア: <span id="score-value">--</span></p>
+  </div>
+
+  <div id="graph-area">
+    <canvas id="pitch-chart"></canvas>
+    <canvas id="mfcc-chart" style="display: none;"></canvas>
+
+    <div class="chart-button-group">
+      <button id="show-pitch">ピッチ</button>
+      <button id="show-mfcc">MFCC</button>
+    </div>
+  </div>
+
+  <button id="next-button">次へ</button>
+
+
+
+  <div id="debug-section" style="margin-top: 40px; text-align: left; max-width: 800px; margin-left: auto; margin-right: auto;">
+    <h3>デバッグ情報</h3>
+
+    <h4>🎵 ピッチ（お題）</h4>
+    <pre id="pitch-original"></pre>
+
+    <h4>🎙 ピッチ（録音）</h4>
+    <pre id="pitch-recorded"></pre>
+
+    <h4>🌀 MFCC（お題）</h4>
+    <pre id="mfcc-original"></pre>
+
+    <h4>🎧 MFCC（録音）</h4>
+    <pre id="mfcc-recorded"></pre>
+  </div>
+  
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="js/score.js"></script>
+</body>
+</html>
