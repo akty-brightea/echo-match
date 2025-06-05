@@ -36,5 +36,5 @@ startGameBtn.addEventListener("click", () => {
   sessionStorage.setItem("playerNames", JSON.stringify(playerNames));
   sessionStorage.setItem("turnCount", selectedTurn);
 
-  window.location.href = "/play.html";
+  window.location.href = "./play.html";
 });

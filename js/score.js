@@ -185,11 +185,11 @@ document.getElementById("next-button").addEventListener("click", () => {
       sessionStorage.removeItem("shuffledPlayers");
     } else {
       // 全ターン終了（必要に応じて結果画面などへ）
-      window.location.href = "result.html"; // or 終了画面へ
+      window.location.href = "./result.html"; // or 終了画面へ
       return;
     }
   }
 
   // 次のプレイヤーのプレイ画面へ
-  window.location.href = "play.html";
+  window.location.href = "./play.html";
 });
